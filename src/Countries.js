@@ -46,7 +46,6 @@ function Countries() {
   const [endIndex, setEndIndex] = useState(12);
 
   useEffect(() => {
-    // async function fetchAPI() {}
     fetch("https://countries-search-data-prod-812920491762.asia-south1.run.app/countries")
       .then((response) => response.json())
       .then((data) => {
@@ -79,7 +78,7 @@ function Countries() {
       </div>
       <div style={containerStyle}>
         {filteredCountries.slice(0, endIndex).map((country) => (
-          <div key={country.common} style={cardStyle}>
+          <div key={country.common} className="countryCard" style={cardStyle}>
             <img src={country.png} alt={country.common} style={imageStyle} />
             <h2>{country.common}</h2>
           </div>
