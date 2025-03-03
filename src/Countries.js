@@ -84,24 +84,24 @@ function Countries() {
           </div>
         ))}
       </div>
-      {countries && (
-        <div className="pagination">
-          {endIndex >= filteredCountries.length ? (
-            <></>
-          ) : (
-            <button onClick={() => setEndIndex((prevIndex) => prevIndex + 6)}>
-              Show More
-            </button>
-          )}
-          {endIndex > 12 ? (
-            <button onClick={() => setEndIndex((prevIndex) => prevIndex - 6)}>
-              Show Less
-            </button>
-          ) : (
-            <></>
-          )}
-        </div>
-      )}
+      // {countries && (
+      //   <div className="pagination">
+      //     {endIndex >= filteredCountries.length ? (
+      //       <></>
+      //     ) : (
+      //       <button onClick={() => setEndIndex((prevIndex) => prevIndex + 6)}>
+      //         Show More
+      //       </button>
+      //     )}
+      //     {endIndex > 12 ? (
+      //       <button onClick={() => setEndIndex((prevIndex) => prevIndex - 6)}>
+      //         Show Less
+      //       </button>
+      //     ) : (
+      //       <></>
+      //     )}
+      //   </div>
+      // )}
     </div>
   );
 }
